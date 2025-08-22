@@ -5,7 +5,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios.get("http://127.0.0.1:8000/")   // 🔹 matches backend URL
+    axios.get("http://localhost:5000/api/message")   // 🔹 matches backend URL
       .then((response) => {
         setMessage(response.data.message); // backend returns {message: "..."}
       })
